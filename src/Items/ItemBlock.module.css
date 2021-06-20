@@ -1,0 +1,64 @@
+.item {
+	position: relative;
+	height: 300px;
+	width: 275px;
+	border: 5px solid #360568;
+	border-radius: 5px;
+}
+
+.image {
+	padding-top: 20px;
+	max-height: 150px;
+	max-width: 150px;
+	margin: auto 0;
+}
+
+.imageDiv {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	flex-direction: column;
+	height: 180px;
+}
+
+.desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 20px;
+}
+
+.desc p {
+	font-size: 1rem;
+}
+
+.bottomDesc {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 260px;
+}
+
+.bottomDesc p {
+	font-size: 1.3rem;
+}
+
+.bottomDesc button {
+	font-size: 1rem;
+	border: none;
+	background-color: #57458a;
+	color: #fafefb;
+	padding: 5px 10px;
+	box-shadow: 1px 0px 1px 1px black;
+}
+
+.bottomDesc button:active {
+	background-color: #67659b;
+	box-shadow: 1px 0 1px 0 black;
+}
+
+.bottomDesc > * {
+	margin: 0px;
+	margin: 0 20px;
+}
