@@ -39,10 +39,6 @@
 	font-size: 1.3rem;
 }
 
-.header img {
-	margin-right: 5px;
-}
-
 .cart {
 	background-color: #3a7156;
 	border-radius: 10px;
@@ -58,5 +54,5 @@
 	background-color: #5b2a86;
 	color: #fafefb;
 	border-radius: 10px;
-	padding: 5px 8px;
+	padding: 5px 6px;
 }

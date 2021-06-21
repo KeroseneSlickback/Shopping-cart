@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './MainNavBar.module.css';
-import trolley from '../imgs/trolley.png';
+import cart from '../imgs/cart.png';
+
+import CartContext from '../Store/CartContext';
 
 function MainNavBar() {
+	const cartContext = useContext(CartContext);
+
 	return (
 		<header className={classes.header}>
 			<div className={classes.icon}>Shopping Cart App</div>
@@ -13,9 +17,9 @@ function MainNavBar() {
 						<Link to="/">Home Page</Link>
 					</li>
 					<li className={classes.cart}>
-						<img src={trolley} alt="Shopping Cart" />
+						<img src={cart} alt="Shopping Cart" />
 						<Link to="/shopping-cart">Shopping Cart</Link>
-						<span className={classes.span}>10</span>
+						<span className={classes.span}>{cartContext.totalCart}</span>
 					</li>
 				</ul>
 			</nav>

@@ -3,11 +3,10 @@ import React from 'react';
 import classes from './ItemBlock.module.css';
 
 function ItemBlock(props) {
-	let quickPeek = false;
-
-	function viewPeek() {
-		quickPeek = true;
+	function clickHandler() {
+		props.quickView(props.num);
 	}
+
 	return (
 		<div className={classes.item}>
 			<div className={classes.imageDiv}>
@@ -17,8 +16,7 @@ function ItemBlock(props) {
 				<p>{props.title}</p>
 				<div className={classes.bottomDesc}>
 					<p>${props.price}</p>
-					<button onClick={viewPeek(props.key)}>Quick View</button>
-					{quickPeek ? null : null}
+					<button onClick={clickHandler}>Quick View</button>
 				</div>
 			</div>
 		</div>
