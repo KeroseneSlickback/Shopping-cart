@@ -34,6 +34,7 @@ function Home() {
 			...addedItem,
 			quantity: quant,
 		});
+		setViewModal(false);
 	}
 
 	useEffect(() => {
