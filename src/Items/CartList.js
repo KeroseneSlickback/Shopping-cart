@@ -12,6 +12,7 @@ function CartList(props) {
 
 	useEffect(() => {
 		cartContext.changeQuantity(props.id, quantity);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [quantity]);
 
 	function removeItem(id) {
