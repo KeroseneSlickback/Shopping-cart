@@ -1,37 +1,75 @@
-.row {
+.container {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 4fr 1fr;
+	width: 600px;
+	box-shadow: 0 0 5px rgba(119, 133, 172, 0.7);
+	margin-bottom: 10px;
 }
 
-.row td {
-	padding: 5px;
+.imageDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .image {
-	max-height: 75px;
-	max-width: 75px;
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.infoDiv {
+}
+
+.infoDiv h3 {
+	margin: 10px;
 }
 
 .title {
 	word-wrap: break-word;
 }
 
-.adjust {
+.adjustDiv {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
+.adjustDiv > * {
+	margin: 10px;
+}
+
+.adjustDiv p {
+	font-size: 1.1rem;
+}
+
+.priceDiv p {
+	font-weight: 600;
+	font-size: 1rem;
+	margin: 10px;
+}
+
+.totalDiv h4 {
+	margin: 10px;
+}
+
+/* Buttons below */
 .quantity {
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
 }
 
 .addMinus {
 	border: none;
-	background-color: #3a7156;
+	background-color: #7785ac;
 	color: #fafefb;
-	box-shadow: 0 0 1px 2px #3a7156;
+	box-shadow: 0 0 1px 2px #7785ac;
 }
 
 .addMinus:active {
-	box-shadow: 0 0 1px 1px #3a7156;
+	box-shadow: 0 0 1px 1px #7785ac;
 }
 
 .inputQuantity {
@@ -60,19 +98,15 @@
 .delete {
 	font-size: 0.8rem;
 	border: none;
-	background-color: #013220;
+	background-color: #89a6b9;
 	color: #fafefb;
 	padding: 2px 4px;
-	box-shadow: 0 0 1px 2px #013220;
+	box-shadow: 0 0 1px 2px #7785ac;
 }
 
 .delete:active {
-	background-color: #3a7156;
-	box-shadow: 0 0 1px 1px #3a7156;
+	background-color: #7785ac;
+	box-shadow: 0 0 1px 1px #7785ac;
 }
 
-.price {
-}
-
-.itemTotal {
-}
+/* Buttons above */

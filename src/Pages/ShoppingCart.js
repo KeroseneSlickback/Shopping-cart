@@ -14,9 +14,11 @@ function ShoppingCart() {
 
 	return (
 		<div className={classes.cartDiv}>
-			<h1>Shopping list</h1>
-			<table className={classes.table}>
-				<tbody>
+			<div>
+				<h1>Shopping list</h1>
+			</div>
+			<div className={classes.sectionDiv}>
+				<div>
 					{cart.map(item => {
 						return (
 							<CartList
@@ -29,11 +31,11 @@ function ShoppingCart() {
 							/>
 						);
 					})}
-				</tbody>
-			</table>
-			<div className={classes.totalDiv}>
-				<h2>Total: ${cartContext.total}</h2>
-				<button className={classes.checkout}>Checkout</button>
+				</div>
+				<div className={classes.totalDiv}>
+					<h2>Subtotal: ${cartContext.total}</h2>
+					<button className={classes.checkout}>Checkout</button>
+				</div>
 			</div>
 		</div>
 	);

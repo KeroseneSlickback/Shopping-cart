@@ -35,56 +35,54 @@ function CartList(props) {
 	}
 
 	return (
-		<tr className={classes.row}>
-			<td>
+		<div className={classes.container}>
+			<div className={classes.imageDiv}>
 				<img src={props.image} alt={props.title} className={classes.image} />
-			</td>
-			<td className={classes.title}>
-				<h3>{props.title}</h3>
-			</td>
-			<td>
-				<p>Qty: {props.quantity}</p>
-			</td>
-			<td className={classes.adjust}>
-				<div className={classes.quantity}>
-					<input
-						type="button"
-						value="-"
-						className={classes.addMinus}
-						onClick={decreaseQuantity}
-					/>
-					<input
-						type="number"
-						step="1"
-						min="1"
-						max=""
-						name="quantity"
-						value={quantity}
-						onChange={changeHandler}
-						className={classes.inputQuantity}
-					/>
-					<input
-						type="button"
-						value="+"
-						className={classes.addMinus}
-						onClick={increaseQuantity}
-					/>
+			</div>
+			<div className={classes.infoDiv}>
+				<h3 className={classes.title}>{props.title}</h3>
+				<div className={classes.adjustDiv}>
+					<div className={classes.quantity}>
+						<input
+							type="button"
+							value="-"
+							className={classes.addMinus}
+							onClick={decreaseQuantity}
+						/>
+						<input
+							type="number"
+							step="1"
+							min="1"
+							max=""
+							name="quantity"
+							value={quantity}
+							onChange={changeHandler}
+							className={classes.inputQuantity}
+						/>
+						<input
+							type="button"
+							value="+"
+							className={classes.addMinus}
+							onClick={increaseQuantity}
+						/>
+					</div>
+					<button
+						className={classes.delete}
+						onClick={() => removeItem(props.id)}
+					>
+						Delete
+					</button>
+					<div className={classes.priceDiv}>
+						<p>${props.price} each</p>
+					</div>
 				</div>
-			</td>
-			<td>
-				<button className={classes.delete} onClick={() => removeItem(props.id)}>
-					Delete
-				</button>
-			</td>
-			<td className={classes.price}>
-				<p>${props.price} each</p>
-			</td>
-			<td className={classes.itemTotal}>
+			</div>
+			<div className={classes.totalDiv}>
 				<h4>
 					Item total: ${parseFloat(props.price * props.quantity).toFixed(2)}
 				</h4>
-			</td>
-		</tr>
+			</div>
+		</div>
 	);
 }
 

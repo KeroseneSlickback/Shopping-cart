@@ -5,6 +5,12 @@
 	flex-direction: column;
 }
 
+.sectionDiv {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 .table {
 	min-width: 80vw;
 	max-width: 95vw;
@@ -13,20 +19,20 @@
 .checkout {
 	font-size: 1.2rem;
 	border: none;
-	background-color: #013220;
+	background-color: #0f52ba;
 	color: #fafefb;
 	padding: 6px 12px;
-	box-shadow: 0 0 1px 2px #013220;
+	box-shadow: 0 0 1px 2px #326fbd;
 }
 
 .checkout:active {
-	background-color: #3a7156;
-	box-shadow: 0 0 1px 1px #3a7156;
+	background-color: #326fbd;
+	box-shadow: 0 0 1px 1px #326fbd;
 }
 
 .totalDiv {
-	margin-top: 20px;
-	box-shadow: 0 0 5px rgba(54, 5, 104, 0.7);
+	margin-left: 20px;
+	box-shadow: 0 0 5px rgba(119, 133, 172, 0.7);
 	padding: 5px 20px 25px 20px;
 	display: flex;
 	justify-content: center;

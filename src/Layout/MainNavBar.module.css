@@ -19,6 +19,7 @@
 .navi {
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 .home {
@@ -26,6 +27,11 @@
 	margin-right: 10px;
 	border-radius: 5px;
 	padding: 0 10px;
+}
+
+.home:active {
+	background-color: #3a7156;
+	box-shadow: 0 0 1px 0px white;
 }
 
 .link {
@@ -46,6 +52,11 @@
 	align-items: center;
 	background-color: #3a7156;
 	border-radius: 5px;
+}
+
+.cart:active {
+	background-color: #558f6f;
+	box-shadow: 0 0 1px 0px white;
 }
 
 .span {
