@@ -10,19 +10,23 @@ function MainNavBar() {
 
 	return (
 		<header className={classes.header}>
-			<div className={classes.icon}>Shopping Cart App</div>
-			<nav>
-				<ul>
-					<li className={classes.home}>
-						<Link to="/">Home Page</Link>
-					</li>
-					<li className={classes.cart}>
+			<div>
+				<h1 className={classes.icon}>Shopping Cart App</h1>
+			</div>
+			<div className={classes.navi}>
+				<div className={classes.home}>
+					<Link to="/" className={classes.link}>
+						<p>Home</p>
+					</Link>
+				</div>
+				<div className={classes.cart}>
+					<Link to="/shopping-cart" className={classes.link}>
 						<img src={cart} alt="Shopping Cart" />
-						<Link to="/shopping-cart">Shopping Cart</Link>
+						<p>Shopping Cart</p>
 						<span className={classes.span}>{cartContext.totalCart}</span>
-					</li>
-				</ul>
-			</nav>
+					</Link>
+				</div>
+			</div>
 		</header>
 	);
 }

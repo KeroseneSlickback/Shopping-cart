@@ -30,11 +30,22 @@ export const CartContextProvider = props => {
 		});
 	}
 
+	function changeQuantityHandler(itemId, quantity) {
+		setUserCart(prev => {
+			const prevCopy = [...prev];
+			const foundItem = prevCopy.find(foundItem => {
+				return foundItem.id === itemId;
+			});
+			foundItem.quantity = quantity;
+			return prevCopy;
+		});
+	}
+
 	useEffect(() => {
 		const updateQuantity = userCart.reduce((a, b) => a + b.quantity, 0);
 		setQuantity(updateQuantity);
 		const updateTotal = userCart.reduce((a, b) => a + b.quantity * b.price, 0);
-		setRunningTotal(updateTotal);
+		setRunningTotal(parseFloat(updateTotal).toFixed(2));
 	}, [userCart]);
 
 	function removeFromCartHandler(itemId) {
@@ -46,10 +57,6 @@ export const CartContextProvider = props => {
 	// function itemInCartHandler(itemId) {
 	// 	return userCart.some(item => item === itemId);
 	// }
-
-	function changeQuantityHandler(itemId) {
-		// search through cart, adjust quantity... some?
-	}
 
 	const context = {
 		cart: userCart,

@@ -1,9 +1,20 @@
-.listDiv {
-	border: 3px solid black;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
+.row {
+}
+
+.row td {
+	padding: 5px;
+}
+
+.image {
+	max-height: 75px;
+	max-width: 75px;
+}
+
+.title {
+	word-wrap: break-word;
+}
+
+.adjust {
 }
 
 .quantity {
@@ -30,8 +41,8 @@
 
 .addMinus,
 .inputQuantity {
-	padding: 4px 8px;
-	font-size: 1rem;
+	padding: 2px 4px;
+	font-size: 0.8rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -44,4 +55,24 @@
 /* Firefox */
 .inputQuantity[type='number'] {
 	-moz-appearance: textfield;
+}
+
+.delete {
+	font-size: 0.8rem;
+	border: none;
+	background-color: #013220;
+	color: #fafefb;
+	padding: 2px 4px;
+	box-shadow: 0 0 1px 2px #013220;
+}
+
+.delete:active {
+	background-color: #3a7156;
+	box-shadow: 0 0 1px 1px #3a7156;
+}
+
+.price {
+}
+
+.itemTotal {
 }

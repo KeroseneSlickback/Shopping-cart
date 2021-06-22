@@ -9,50 +9,52 @@
 
 .icon {
 	background-color: #3a7156;
-	font-size: 2.8rem;
+	font-size: 2.85rem;
 	color: #fafefb;
-	border-radius: 10px;
-	margin: 10px 10px;
-	padding: 4px 20px;
+	border-radius: 5px;
+	padding: 5px 20px;
+	margin: 10px 0px;
+}
+
+.navi {
+	display: flex;
+	align-items: center;
 }
 
 .home {
 	background-color: #164934;
-	border-radius: 10px;
-	padding: 10px 15px;
+	margin-right: 10px;
+	border-radius: 5px;
+	padding: 0 10px;
 }
 
-.header ul {
+.link {
+	text-decoration: none;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	padding: 5px 10px;
 }
 
-.header li {
-	display: flex;
-	list-style-type: none;
-}
-
-.header li > * {
-	text-decoration: none;
+.header p {
 	color: #fafefb;
 	font-size: 1.3rem;
-}
-
-.cart {
-	background-color: #3a7156;
-	border-radius: 10px;
-	padding: 5px 10px;
-	margin: 10px;
-}
-
-.cart a {
 	margin: 5px;
 }
 
+.cart {
+	display: flex;
+	align-items: center;
+	background-color: #3a7156;
+	border-radius: 5px;
+}
+
 .span {
+	font-size: 1.3rem;
+	padding-top: 3px;
+	text-align: center;
 	background-color: #5b2a86;
 	color: #fafefb;
-	border-radius: 10px;
-	padding: 5px 6px;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
 }
