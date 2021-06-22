@@ -33,7 +33,9 @@
 .totalDiv {
 	margin-left: 20px;
 	box-shadow: 0 0 5px rgba(119, 133, 172, 0.7);
-	padding: 5px 20px 25px 20px;
+	height: 130px;
+	width: 250px;
+	padding-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

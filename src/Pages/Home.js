@@ -30,10 +30,13 @@ function Home() {
 		const addedItem = itemList.find(item => {
 			return item.id === itemId;
 		});
-		cartContext.addToCart({
-			...addedItem,
-			quantity: quant,
-		});
+		cartContext.addToCart(
+			{
+				...addedItem,
+			},
+			quant
+		);
+		// console.log(addedItem, quant);
 		setViewModal(false);
 	}
 

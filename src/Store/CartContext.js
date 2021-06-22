@@ -15,17 +15,16 @@ export const CartContextProvider = props => {
 	const [quantity, setQuantity] = useState(0);
 	const [runningTotal, setRunningTotal] = useState(0);
 
-	function addToCartHandler(item) {
+	function addToCartHandler(item, quantity) {
 		setUserCart(prev => {
 			const prevCopy = [...prev];
-			const foundDup = prevCopy.find(foundItem => {
-				return foundItem.id === item.id;
-			});
-			if (foundDup) {
-				foundDup.quantity = foundDup.quantity + item.quantity;
+			const foundDup = prevCopy.findIndex(copyItem => copyItem.id === item.id);
+			if (foundDup >= 0) {
+				const newQuantity = prev[foundDup].quantity + quantity;
+				prevCopy.splice(foundDup, 1, { ...item, quantity: newQuantity });
 				return prevCopy;
 			} else {
-				return prev.concat(item);
+				return prev.concat({ ...item, quantity: quantity });
 			}
 		});
 	}
@@ -33,10 +32,13 @@ export const CartContextProvider = props => {
 	function changeQuantityHandler(itemId, quantity) {
 		setUserCart(prev => {
 			const prevCopy = [...prev];
-			const foundItem = prevCopy.find(foundItem => {
-				return foundItem.id === itemId;
+			const foundItem = prevCopy.findIndex(
+				foundItem => foundItem.id === itemId
+			);
+			prevCopy.splice(foundItem, 1, {
+				...prev[foundItem],
+				quantity: quantity,
 			});
-			foundItem.quantity = quantity;
 			return prevCopy;
 		});
 	}
