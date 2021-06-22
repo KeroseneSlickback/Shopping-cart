@@ -28,7 +28,7 @@ function ViewModal(props) {
 
 	return (
 		<div className={classes.modal}>
-			<img src={props.image} alt={props.title} />
+			<img className={classes.productImg} src={props.image} alt={props.title} />
 			<h2>{props.title}</h2>
 			<p>{props.desc}</p>
 			<div className={classes.quickBottom}>

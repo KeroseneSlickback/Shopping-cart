@@ -15,11 +15,9 @@
 }
 
 .image {
+	margin: 10px;
 	max-height: 100px;
 	max-width: 100px;
-}
-
-.infoDiv {
 }
 
 .infoDiv h3 {
@@ -57,9 +55,9 @@
 
 /* Buttons below */
 .quantity {
-	/* display: flex;
+	display: flex;
 	justify-content: center;
-	align-items: center; */
+	align-items: center;
 }
 
 .addMinus {
@@ -111,3 +109,44 @@
 }
 
 /* Buttons above */
+
+@media (max-width: 700px) {
+	.container {
+		width: 80vw;
+		margin: 0 10px 10px 10px;
+	}
+}
+
+@media (max-width: 475px) {
+	.container {
+		width: 80vw;
+		margin: 0 10px 10px 10px;
+	}
+
+	.adjustDiv {
+		flex-wrap: wrap;
+	}
+
+	.adjustDiv > * {
+		margin: 5px;
+	}
+
+	.priceDiv p {
+		font-size: 0.9rem;
+		font-weight: 500;
+		margin: 0px;
+	}
+
+	.title {
+		font-size: 1rem;
+	}
+
+	.totalDiv h4 {
+		font-size: 0.9rem;
+	}
+
+	.image {
+		max-height: 75px;
+		max-width: 75px;
+	}
+}

@@ -1,5 +1,5 @@
 .modal {
-	max-width: 500px;
+	max-width: 75vw;
 	position: fixed;
 	z-index: 10;
 	top: 20vh;
@@ -12,7 +12,7 @@
 	border: 3px solid #3a7156;
 }
 
-.modal img {
+.productImg {
 	max-height: 200px;
 	max-width: 200px;
 }
@@ -53,6 +53,38 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+@media (max-width: 700px) {
+	.modal {
+		top: 10vh;
+		min-width: 75vw;
+	}
+
+	.modal h2 {
+		font-size: 1.1rem;
+	}
+
+	.modal p {
+		font-size: 1rem;
+	}
+
+	.productImg {
+		max-height: 125px;
+		min-height: 125px;
+	}
+
+	.closeBtn {
+		height: 30px;
+	}
+
+	.quickBottom {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.quickBottom > * {
+		margin-bottom: 10px;
+	}
 }
 
 .quantity {
