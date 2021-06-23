@@ -21,7 +21,7 @@ function MainNavBar() {
 					</Link>
 				</div>
 				<div className={classes.cart}>
-					<Link to="/shopping-cart" className={classes.link}>
+					<Link to="/show-shopping-cart" className={classes.link}>
 						<img src={cart} alt="Shopping Cart" />
 						<p>Shopping Cart</p>
 						<span className={classes.span}>{cartContext.totalCart}</span>
