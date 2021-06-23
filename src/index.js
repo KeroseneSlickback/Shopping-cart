@@ -8,7 +8,9 @@ import { CartContextProvider } from './Store/CartContext';
 // context here
 
 ReactDOM.render(
+	// Provides context for the entire app
 	<CartContextProvider>
+		{/* Router to bring page functionality from the top down */}
 		<Router>
 			<App />
 		</Router>

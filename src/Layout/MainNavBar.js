@@ -6,6 +6,7 @@ import cart from '../imgs/cart.png';
 import CartContext from '../Store/CartContext';
 
 function MainNavBar() {
+	// context brought in to display current total of number of items in cart
 	const cartContext = useContext(CartContext);
 
 	return (

@@ -3,6 +3,7 @@ import React from 'react';
 import classes from './ItemBlock.module.css';
 
 function ItemBlock(props) {
+	// A simple block for each item to display contents
 	function clickHandler() {
 		props.quickView(props.num);
 	}

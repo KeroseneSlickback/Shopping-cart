@@ -8,6 +8,8 @@ function ShoppingCart() {
 	const [cart, setCart] = useState([]);
 	const cartContext = useContext(CartContext);
 
+	// useEffect here brings in the cart stored in context, then saves it to state to display it
+	// is called on first call, then updates when cart state changes
 	useEffect(() => {
 		setCart(cartContext.cart);
 	}, [cartContext]);

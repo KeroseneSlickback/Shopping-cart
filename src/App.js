@@ -9,7 +9,9 @@ import ShoppingCart from './Pages/ShoppingCart';
 function App() {
 	return (
 		<div>
+			{/* MainLayout as the overall header/body/footer setup */}
 			<MainLayout>
+				{/* Switch/Route for page change, 'exaxt' here to enforce only '/' */}
 				<Switch>
 					<Route path="/" exact>
 						<Home />

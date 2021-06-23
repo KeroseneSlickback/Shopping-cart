@@ -7,9 +7,11 @@ import CartContext from '../Store/CartContext';
 // Adjust quantity
 
 function CartList(props) {
+	// bring in context and a new quantity for adjustments
 	const [quantity, setQuantity] = useState(props.quantity);
 	const cartContext = useContext(CartContext);
 
+	// if quantity changes from input, cart in context is changed with id and quantity
 	useEffect(() => {
 		cartContext.changeQuantity(props.id, quantity);
 		// eslint-disable-next-line react-hooks/exhaustive-deps

@@ -8,12 +8,15 @@ import classes from './Home.module.css';
 import CartContext from '../Store/CartContext';
 
 function Home() {
+	// Bringing in context and setting state
 	const cartContext = useContext(CartContext);
 
+	// Makes an item list to use from .fetch, boolean for pop-up modal, and to store a selected item for modal
 	const [itemList, setItemList] = useState([]);
 	const [viewModal, setViewModal] = useState(false);
 	const [selectItem, setSelectItem] = useState();
 
+	// Takes the item selected from individual blocks and sets it to the modal, then calls it
 	function openModal(num) {
 		const selectedItem = itemList.find(obj => {
 			return obj.id === num;
@@ -26,6 +29,7 @@ function Home() {
 		setViewModal(false);
 	}
 
+	// Finds the selected item, sends it to context with a spread of the item and selected quantity
 	function confirmHandler(itemId, quant) {
 		const addedItem = itemList.find(item => {
 			return item.id === itemId;
@@ -36,10 +40,10 @@ function Home() {
 			},
 			quant
 		);
-		// console.log(addedItem, quant);
 		setViewModal(false);
 	}
 
+	// fetches cart. This info is used throughout the app
 	useEffect(() => {
 		fetch('https://fakestoreapi.com/products?limit=9')
 			.then(res => res.json())

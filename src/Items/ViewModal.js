@@ -4,8 +4,10 @@ import closeSVG from '../imgs/closeSVG.svg';
 import classes from './ViewModal.module.css';
 
 function ViewModal(props) {
+	// state here is changed between three different functions and displays in the num input
 	const [quantity, setQuantity] = useState(1);
 
+	// calls up to Shopping Cart with the prop.id and quantity chosen in the modal
 	function addToCart() {
 		props.onConfirm(props.id, quantity);
 	}
