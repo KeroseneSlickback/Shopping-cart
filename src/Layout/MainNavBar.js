@@ -16,7 +16,7 @@ function MainNavBar() {
 			</div>
 			<div className={classes.navi}>
 				<div className={classes.home}>
-					<Link to="/home" className={classes.link}>
+					<Link to="/" className={classes.link}>
 						<p>Home</p>
 					</Link>
 				</div>
