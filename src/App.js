@@ -13,7 +13,7 @@ function App() {
 			<MainLayout>
 				{/* Switch/Route for page change, 'exaxt' here to enforce only '/' */}
 				<Switch>
-					<Route path="/" exact>
+					<Route path="/home" exact>
 						<Home />
 					</Route>
 					<Route path="/shopping-cart">
